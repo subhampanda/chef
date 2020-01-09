@@ -1,0 +1,23 @@
+add  this  in default
+
+
+include_recipe "cookook_name::recipe_name"
+include_recipe "cookook_name::recipe_name"
+
+
+eg-
+
+include_recipe "file-cookbook::file_with_owner"
+include_recipe "file-cookbook::package_httpd"
+
+
+
+after 
+
+sudo  chef-client  -zr "recipe[cookbook_name::default]" or
+sudo  chef-client  -zr "recipe[cookbook_name]"
+
+eg - 
+
+sudo  chef-client  -zr "recipe[file-cookbook::default]" or
+sudo  chef-client  -zr "recipe[file-cookbook]"
