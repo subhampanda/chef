@@ -10,4 +10,4 @@ file '/subhamfile' do
   action :create
 end  
 chef exec  ruby -c   file-cookbook/recipes/file-recipe.rb
-chef-client -zr "[file-cookbook::file-recipe]"
+chef-client -zr "recipe[file-cookbook::file-recipe]"
