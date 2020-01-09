@@ -1,0 +1,9 @@
+user 'sangam' do
+   action :create
+end
+
+group 'santnu' do
+   action :create
+   members 'sangam'
+   append  true
+end
