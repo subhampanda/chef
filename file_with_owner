@@ -1,0 +1,6 @@
+file '/subhamfile' do
+  content  "welcome subham"
+  action :create
+  owner  'root'
+  group  'devops'
+end
