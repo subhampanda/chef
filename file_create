@@ -1,0 +1,13 @@
+mkdir cookbooks
+cd  cookbooks
+chef generate cookbook  file-cookbook
+cd file-cookbook
+chef generate  recipe file-recipe
+cd .. [in file-cookbook  folder]
+vi  test-cookbook/recipes/file-recipe.rb
+file '/subhamfile' do
+  content  "welcome subham"
+  action :create
+end  
+chef exec  ruby -c   file-cookbook/recipes/file-recipe.rb
+chef-client -zr "[file-cookbook::file-recipe]"
