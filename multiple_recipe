@@ -1,0 +1,5 @@
+at  a  time  one  recipe   from one  cookbook
+
+sudo  chef-client  -zr "recipe[cookbook_name1::recipe_name],recipe[cookbook_name2::recipe_name]"
+
+sudo  chef-client  -zr "recipe[ohai_info::user_group],recipe[file-cookbook::package_httpd]"
