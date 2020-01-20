@@ -1,0 +1,27 @@
+https://manage.chef.io/    [click on  chef]
+Download  chef-starter
+and  unzip chef-starter 
+copy and paste into chef-workstation
+cd  chef-starter
+cd  chef-repo
+chef  generate   cookbook apache-cookbook   [in  side  the cookbooks]
+cd apache-cookbook
+chef  generate   recipe apache-recipe 
+cd recipes
+vi apache-recipe.rb
+file '/subhampanda.com'  do
+   content 'subham  panda is a good boy'
+   action  :create
+end
+
+cd ../..  [in cookbooks folder]   
+copy and paste file .pem  file of client node server [subhamohio.pem]  
+knife  bootstrap <private-ip>  --ssh-user <user-name> --sudo  -i  <.pem fle>  -N <node-name>
+knife  bootstrap 172.31.31.100  --ssh-user centos  --sudo  -i  subhamohio.pem  -N node2    [inside chef-repo/cookbooks]
+
+knife  node list
+knife  cookbook upload apache-cookbook [ in  cookbooks folder]
+knife cookbook list 
+knife node  run_list   set node2  "recipe[apache-cookbook::apache-recipe]" [ in  cookbooks  folder]  
+knife  node show    node2  [To  check  run list  ]
+chef-client     [in client server ] 
