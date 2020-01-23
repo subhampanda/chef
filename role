@@ -1,0 +1,3 @@
+knife  bootstrap    <node_ip>      --ssh-user   <user_name> --sudo  -i   <ec2 .pem>      -N    <any_node_name>
+knife  bootstrap    172.31.31.7    --ssh-user   centos      --sudo  -i   subhamohio.pem  -N    node1
+knife  bootstrap    172.31.31.145  --ssh-user   centos      --sudo  -i   subhamohio.pem  -N    node2
