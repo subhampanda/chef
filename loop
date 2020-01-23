@@ -1,0 +1,5 @@
+%w(mariadb-server unzip vim).each do |p|
+ package p  do
+  action :create
+ end  
+end
