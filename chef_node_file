@@ -4,6 +4,7 @@ and  unzip chef-starter
 copy and paste into chef-workstation
 cd  chef-starter
 cd  chef-repo
+knife  ssl  check  [in  chef-repo  folder]
 chef  generate   cookbook apache-cookbook   [in  side  the cookbooks]
 cd apache-cookbook
 chef  generate   recipe apache-recipe 
