@@ -1,0 +1,29 @@
+Cookbook
+
+Knife  cookbook list  [ ALL cook book list]
+knife cookbook delete cookbook-name -y   [delete  cookbook ]
+------------------------------------
+node 
+
+knife  node  list      [all node list ]
+knife node  delete  node-name -y  [delete  node] 
+--------------------------------------
+client
+
+knife  client  list  [  all  client  list]
+knife  client  delete clent-name -y  [delete  client]
+---------------------------------------
+role
+
+knife  role  list  [all  role name]
+knife  role  delete    role-name   -y  [delete role name]
+
+
+
+
+
+
+
+
+
+
