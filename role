@@ -1,3 +1,42 @@
 knife  bootstrap    <node_ip>      --ssh-user   <user_name> --sudo  -i   <ec2 .pem>      -N    <any_node_name>
 knife  bootstrap    172.31.31.7    --ssh-user   centos      --sudo  -i   subhamohio.pem  -N    node1
 knife  bootstrap    172.31.31.145  --ssh-user   centos      --sudo  -i   subhamohio.pem  -N    node2
+
+knife  node  list
+
+vi web.rb
+name "web"
+description "web  server role"
+run_list "recipe[apache-cookbook]","recipe[test-cookbook]"
+
+knife  role  from  the   roles/web.rb
+
+knife node  run_list  set  node1 "role[web]"
+knife node  run_list  set  node2 "role[web]"
+
+
+knife  cookbook upload  apache-cookbook 
+knife  cookbook upload  test-cookbook
+
+
+
+in  node  
+echo  "* * * * * root chef-client  " >> /etc/crontab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
