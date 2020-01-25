@@ -1,0 +1,66 @@
+mkdir data_bags
+cd  data_bags
+mkdir users
+cd users
+------
+user1.json
+
+{
+	"id": "user1",
+	"comment": "I am user1",
+	"uid": 100,
+	"gid": 1,
+	"home": "/home/user1",
+	"shell": "/bin/bash",
+	"platform": "centos"
+}
+
+--------
+user2.json
+
+{
+	"id": "user2",
+	"comment": "I am user2",
+	"uid": 101,
+	"gid": 1,
+	"home": "/home/user2",
+	"shell": "/bin/bash",
+	"platform": "centos"
+}
+
+cd  ../.. [in chef-repo]
+ knife data bag  from file users  user1.json
+ knife data bag  from file users  user2.json
+ 
+ knife  data bag list
+ knife  data   bag  show  users
+ knife  data   bag  show  users/user1
+ knife  search  users "*:*"
+ cd cookbooks [in cookbook folder]
+ chef  generate  cookbook  myusers
+ cd  myusers/recipes
+ vi  default.rb
+ 
+ search("users", "platform:centos").each do |user_data|
+	user user_data['id'] do
+    comment user_data['comment']
+    uid user_data['uid']
+    gid user_data['gid']
+    home user_data['home']
+    shell user_data['shell']
+	end
+end
+
+knife  cookbook upload myusers
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
