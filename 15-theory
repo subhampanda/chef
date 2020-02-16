@@ -1,1 +1,4 @@
 chef turns infracture into code [ruby] we  can automate  build  deploy manage  the code . 
+chef-server  ---  it holds all the configuration   data  node  will   use  for  configuraration
+chef-node    ---  it  is  client server which can attach with  server from  where it will   pull the configuration data 
+chef-workstation -- it  holds all the configuration  data that will  push to chef-server  from server will go  to  node  for  update  
