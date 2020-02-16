@@ -1,4 +1,17 @@
 chef turns infracture into code [ruby] we  can automate  build  deploy manage  the code . 
 chef-server  ---  it holds all the configuration   data  node  will   use  for  configuraration
 chef-node    ---  it  is  client server which can attach with  server from  where it will   pull the configuration data 
-chef-workstation -- it  holds all the configuration  data that will  push to chef-server  from server will go  to  node  for  update  
+chef-workstation -- it  holds all the configuration  data that will  push to chef-server  from server will go  to  node  for  update 
+
+Resource - piece of infrastructure and its desired state
+           package that should be installed, 
+           a service that should be running,
+           or a file that should be generated
+Recipe -   It  is  collection of resourse 
+            resources - in wich write the  configuration code  
+              Install and configure software components.
+              Manage files.
+              Deploy applications.
+              Execute other Recipes
+Run_list -   lets you specify which Recipes to run, and the order in which to run them specialy  multiple cookbooks
+
