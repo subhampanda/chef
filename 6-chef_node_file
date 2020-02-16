@@ -26,3 +26,9 @@ knife cookbook list
 knife node  run_list   set node2  "recipe[apache-cookbook::apache-recipe]" [ in  cookbooks  folder]  
 knife  node show    node2  [To  check  run list  ]
 chef-client     [in client server ] 
+
+include_recipe "cookook_name::recipe_name"
+knife node  run_list   set node2  "recipe[apache-cookbook]
+
+
+
