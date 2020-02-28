@@ -16,6 +16,7 @@ knife   role  list
 knife node  run_list  set  node1 "role[web]"
 knife node  run_list  set  node2 "role[web]"
 
+knife node  show node1
 
 knife  cookbook upload  apache-cookbook 
 knife  cookbook upload  test-cookbook
