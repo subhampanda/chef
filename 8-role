@@ -11,6 +11,8 @@ run_list "recipe[apache-cookbook]","recipe[test-cookbook]"
 
 knife  role  from   file  roles/web.rb
 
+knife   role  list
+
 knife node  run_list  set  node1 "role[web]"
 knife node  run_list  set  node2 "role[web]"
 
