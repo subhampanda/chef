@@ -9,7 +9,7 @@ name "web"
 description "web  server role"
 run_list "recipe[apache-cookbook]","recipe[test-cookbook]"
 
-knife  role  from  the   roles/web.rb
+knife  role  from   file  roles/web.rb
 
 knife node  run_list  set  node1 "role[web]"
 knife node  run_list  set  node2 "role[web]"
