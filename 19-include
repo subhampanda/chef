@@ -1,0 +1,10 @@
+The include? method can be used to ensure that a specific parameter is included before an action is taken. 
+For example, using the include? method to find a specific parameter:
+
+
+if ['debian', 'ubuntu'].include?(node['platform'])
+  # do debian/ubuntu things
+end
+
+
+
